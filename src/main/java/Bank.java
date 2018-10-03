@@ -34,9 +34,6 @@ public class Bank {
         /*
          * Implement this function
          */
-        if (bankAccount == null || amount == null) {
-            return false;
-        }
         double currentBalance = bankAccount.getAccountBalance();
         double finalBalance = currentBalance - amount;
         if (finalBalance < 0) {
@@ -60,9 +57,6 @@ public class Bank {
         /*
          * Implement this function
          */
-        if (bankAccount == null || amount == null) {
-            return false;
-        }
         double currBalance = bankAccount.getAccountBalance();
         double endBalance = currBalance + amount;
         if (endBalance >= 0) {
@@ -89,7 +83,11 @@ public class Bank {
         /*
          * Implement this function
          */
-
+        if (amount < 0 || amount > source.getAccountBalance()) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     /**
@@ -103,8 +101,12 @@ public class Bank {
         /*
          * Implement this function
          */
+        bankAccount.setOwnerName(name);
     }
 
+    /**
+     * private variable totalAccounts.
+     */
     private static int totalAccounts = 0;
     /**
      * Uses static variable to get number of bank accounts opened.
@@ -115,6 +117,7 @@ public class Bank {
         /*
          * Implement this function
          */
+        return totalAccounts;
     }
 
     /**

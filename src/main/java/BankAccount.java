@@ -58,7 +58,8 @@ public class BankAccount {
 
     /**
      * Constructor for BankAccount.
-     * @param name is the ownerName
+     *
+     * @param name            is the ownerName
      * @param accountCategory is the accountType
      */
     public BankAccount(final String name, final BankAccountType accountCategory) {
@@ -75,6 +76,7 @@ public class BankAccount {
 
     /**
      * Gets the accountNumber in Bank class
+     *
      * @return accountNumber
      */
     public int getAccountNumber() {
@@ -83,6 +85,7 @@ public class BankAccount {
 
     /**
      * Sets the accountNumber to inputted number.
+     *
      * @param setAccNum is the account number that will be set
      */
     public void setAccountNumber(final int setAccNum) {
@@ -91,6 +94,7 @@ public class BankAccount {
 
     /**
      * Gets the accountBalance.
+     *
      * @return accountBalance
      */
     public double getAccountBalance() {
@@ -99,6 +103,7 @@ public class BankAccount {
 
     /**
      * Sets the accountBalance as the inputted balance.
+     *
      * @param theBalance is the balance that will be set
      */
     public void setAccountBalance(final double theBalance) {
@@ -107,6 +112,7 @@ public class BankAccount {
 
     /**
      * Gets the name of the owner of the account.
+     *
      * @return ownerName
      */
     public String getOwnerName() {
@@ -115,42 +121,10 @@ public class BankAccount {
 
     /**
      * Sets the ownerName to inputted name
+     *
      * @param nameOfOwner is the name of the owner that will be set
      */
     public void setOwnerName(final String nameOfOwner) {
         ownerName = nameOfOwner;
     }
-
-    /**
-     * Gets the interestRate.
-     * @return interestRate
-     */
-    public double getInterestRate() {
-        return interestRate;
-    }
-
-    /**
-     * Sets the in
-     * @param rateOfInterest is the interest rate that will be set
-     */
-    public void setInterestRate(final double rateOfInterest) {
-        interestRate = rateOfInterest;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public double getInterestEarned() {
-        return interestEarned;
-    }
-
-    /**
-     *
-     * @param rateEarned
-     */
-    public void setInterestEarned(final double rateEarned) {
-        interestEarned = rateEarned;
-    }
-
 }
