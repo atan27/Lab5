@@ -8,14 +8,19 @@
  * @see <a href="https://cs125.cs.illinois.edu/lab/5/">Lab 5 Description</a>
  */
 public class Bank {
+    /**
+     * Create private String bankName.
+     */
+    private String bankName;
 
-    public String bankName;
-
+    /**
+     * Constructor for class Bank.
+     */
     public Bank() {
         bankName = "Illini Bank";
     }
 
-    /**
+     /**
      * Withdraw money from an account.
      * <p>
      * Subtracts the amount of money from bank account's balance. Returns true if transaction is
@@ -29,6 +34,16 @@ public class Bank {
         /*
          * Implement this function
          */
+        if (bankAccount == null || amount == null) {
+            return false;
+        }
+        double currentBalance = bankAccount.getAccountBalance();
+        double finalBalance = currentBalance - amount;
+        if (finalBalance < 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     /**
@@ -45,6 +60,16 @@ public class Bank {
         /*
          * Implement this function
          */
+        if (bankAccount == null || amount == null) {
+            return false;
+        }
+        double currBalance = bankAccount.getAccountBalance();
+        double endBalance = currBalance + amount;
+        if (endBalance >= 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -64,6 +89,7 @@ public class Bank {
         /*
          * Implement this function
          */
+
     }
 
     /**
@@ -79,7 +105,7 @@ public class Bank {
          */
     }
 
-    public static int totalAccounts = 0;
+    private static int totalAccounts = 0;
     /**
      * Uses static variable to get number of bank accounts opened.
      *
